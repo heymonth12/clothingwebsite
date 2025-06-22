@@ -6,12 +6,14 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
+const env = require("dotenv")
 
+require('dotenv').config();
 app.use(express.json());
 app.use(cors());
 
 //connecting to MongoDB Atlas
-mongoose.connect("mongodb+srv://heymonth:heymonth.12@clothingwebsite.trvpo3f.mongodb.net/?retryWrites=true&w=majority&appName=clothingWebsite")
+mongoose.connect(process.env.CONNECTION)
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch(err => console.log('Error connecting to MongoDB:', err));
 
