@@ -11,10 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 //connecting to MongoDB Atlas
-mongoose.connect("mongodb+srv://heymonth:heymonth.12@ecommrce.q3g0x.mongodb.net/?retryWrites=true&w=majority&appName=ecommrce", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose.connect("mongodb+srv://heymonth:heymonth.12@clothingwebsite.trvpo3f.mongodb.net/?retryWrites=true&w=majority&appName=clothingWebsite")
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch(err => console.log('Error connecting to MongoDB:', err));
 
